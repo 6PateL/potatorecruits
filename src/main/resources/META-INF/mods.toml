@@ -1,0 +1,37 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="potatorecruits"
+version="${mod_version}"
+displayName="Potato Recruits"
+description='''Recruits can shoot Create's Potato Cannon. Put a cannon in a recruit's hand and potatoes (or other cannon ammo) in his inventory.'''
+
+[[dependencies.potatorecruits]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.potatorecruits]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.potatorecruits]]
+    modId="create"
+    mandatory=true
+    versionRange="[6.0.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.potatorecruits]]
+    modId="recruits"
+    mandatory=true
+    versionRange="[1.15.2,)"
+    ordering="AFTER"
+    side="BOTH"
