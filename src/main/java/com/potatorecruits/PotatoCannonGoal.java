@@ -75,6 +75,11 @@ public class PotatoCannonGoal extends Goal {
         if (target == null || !target.isAlive()) {
             return false;
         }
+        // ignore targets far above/below (e.g. something deep underground): do not stare at the floor
+        if (Math.abs(target.getY() - recruit.getY()) > 8.0D
+                || (target.getY() < recruit.getY() - 2.5D && !recruit.getSensing().hasLineOfSight(target))) {
+            return false;
+        }
         if (recruit.getState() == 3 || recruit.needsToGetFood()) {
             return false;
         }
