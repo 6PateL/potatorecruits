@@ -58,12 +58,8 @@ public class PotatoCannonGoal extends Goal {
         return -1;
     }
 
+    /** Only a cannon actually held in the main hand counts: no auto-pulling from the backpack. */
     private boolean hasCannon() {
-        if (isCannon(recruit.getMainHandItem())) {
-            return true;
-        }
-        // cannon is in the backpack: take it into the hand
-        recruit.switchMainHandItem(PotatoCannonGoal::isCannon);
         return isCannon(recruit.getMainHandItem());
     }
 
